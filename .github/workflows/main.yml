@@ -12,11 +12,13 @@ jobs:
     steps:
       - name: CM Trigger
         id: cm-mohammed
-        uses: mohammedbabelly/cm-action@v3
+        uses: mohammedbabelly/cm-action@v4
         with:
           cm-token: ${{ secrets.CM_TOKEN }}
           app-id: '6315a13cd08d3f4a6708a798'
           workflow-id: 'ios-method-1'
           branch: 'develop'
+      - run: echo build-id ${{ steps.cm-mohammed.outputs.build-id }}
+        shell: bash
 #         env:
 #           CCI_TOKEN: ${{ secrets.CM_TOKEN }}          
