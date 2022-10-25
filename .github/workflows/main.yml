@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+    types: [opened, reopened, synchronize, assigned, edited]
+#     branches: [ "master" ]
+
+jobs:
+  trigger-cm:
+    runs-on: ubuntu-latest
+    steps:
+      - name: CM Trigger
+        id: cm-mohammed
+        uses: mohammedbabelly/cm-action@v2.0
+#         env:
+#           CCI_TOKEN: ${{ secrets.CM_TOKEN }}          
