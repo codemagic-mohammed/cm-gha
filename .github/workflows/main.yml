@@ -12,6 +12,6 @@ jobs:
     steps:
       - name: CM Trigger
         id: cm-mohammed
-        uses: mohammedbabelly/cm-action@v2.0
+        uses: mohammedbabelly/cm-action@v2
 #         env:
 #           CCI_TOKEN: ${{ secrets.CM_TOKEN }}          
